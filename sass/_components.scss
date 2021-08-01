@@ -1,0 +1,97 @@
+//*****************Logo*****************//
+.logo {
+  height: 3.25rem;
+  margin-left: 3rem;
+}
+
+//*****************Search**************//
+.search {
+  flex-basis: 40%;
+  @include flex(row, center, center);
+
+  &__input {
+    /* Positionning */
+
+    /* Display and box */
+    width: 90%;
+    margin-right: -3rem;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 4rem;
+
+    /* Color */
+    background-color: var(--color-grey-light-2);
+    color: inherit;
+
+    /* Text */
+    font-family: inherit;
+    font-style: inherit;
+
+    /* Other */
+    @include transitionAll(.4s);
+
+    &:focus {
+      /* Positionning */
+
+      /* Display and box model */
+      width: 100%;
+
+      /* Color */
+      background-color: var(--color-grey-light-3);
+
+      /* Text */
+      outline: none;
+
+      /* Other */
+    }
+
+    &::-webkit-input-placeholder {
+      color: var(--color-grey-light-4);
+
+      font-weight: 100;
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light-3);
+  }
+
+  &__button {
+    border: none;
+
+    background-color: var(--color-grey-light-2);
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+
+    fill: var(--color-grey-dark-2);
+  }
+}
+
+//*****************User navigation**************//
+.user-nav {
+  &__icon-box {
+  }
+
+  &_icon {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+
+  &_notification {
+  }
+
+  &__user {
+  }
+
+  &__photo {
+    height: 3.75rem;
+    
+    background-repeat: 100%;
+  }
+
+  &__name {
+  }
+}

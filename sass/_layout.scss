@@ -10,8 +10,10 @@
 
 .header {
   height: 7rem;
-  background-color: var(--color-white);
   border-bottom: var(--color-grey-light-2);
+  
+  @include flex(row, space-between, center);
+  background-color: var(--color-white);
 }
 
 .content {
