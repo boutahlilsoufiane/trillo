@@ -128,3 +128,45 @@
     font-weight: 600;
   }
 }
+//**********************************************//
+//*****************Sidenav**************//
+//**********************************************//
+.sidenav {
+  margin-top: 3rem;
+
+  &__navigation-item {
+    
+    @include transitionAll(.5s);
+    list-style: none;
+    &:nth-of-type(1) {
+      background-color: var(--color-primary);
+    }
+
+    &:active,
+    &:hover {
+      background-color: var(--color-primary);
+    }
+  }
+
+  &__link {
+    @include flex(row, start, center);
+    padding: 1.5rem;
+
+    text-decoration: none;
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+
+    fill: var(--color-white);
+  }
+
+  &__text {
+    color: var(--color-white);
+
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+}

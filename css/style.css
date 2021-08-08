@@ -138,6 +138,32 @@ body {
     font-size: 1.2rem;
     font-weight: 600; }
 
+.sidenav {
+  margin-top: 3rem; }
+  .sidenav__navigation-item {
+    transition: all 0.5s;
+    list-style: none; }
+    .sidenav__navigation-item:nth-of-type(1) {
+      background-color: var(--color-primary); }
+    .sidenav__navigation-item:active, .sidenav__navigation-item:hover {
+      background-color: var(--color-primary); }
+  .sidenav__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 1.5rem;
+    text-decoration: none; }
+  .sidenav__icon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+    fill: var(--color-white); }
+  .sidenav__text {
+    color: var(--color-white);
+    font-size: 1rem;
+    text-transform: uppercase; }
+
 .container {
   max-width: 120rem;
   min-height: 50rem;
