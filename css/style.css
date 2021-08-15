@@ -141,12 +141,22 @@ body {
 .sidenav {
   margin-top: 3rem; }
   .sidenav__navigation-item {
+    position: relative;
     transition: all 0.5s;
     list-style: none; }
-    .sidenav__navigation-item:nth-of-type(1) {
-      background-color: var(--color-primary); }
-    .sidenav__navigation-item:active, .sidenav__navigation-item:hover {
-      background-color: var(--color-primary); }
+    .sidenav__navigation-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 10px;
+      height: 100%;
+      background-color: var(--color-primary);
+      transform: scaleY(0);
+      transition: transform .2s, width .5s .2s; }
+    .sidenav__navigation-item:hover::before {
+      transform: scaleY(1);
+      width: 100%; }
   .sidenav__link {
     display: flex;
     flex-direction: row;
@@ -163,6 +173,11 @@ body {
     color: var(--color-white);
     font-size: 1rem;
     text-transform: uppercase; }
+
+.copyrights {
+  padding: 3.5rem;
+  color: var(--color-grey-light-4);
+  text-align: center; }
 
 .container {
   max-width: 120rem;
@@ -185,6 +200,10 @@ body {
 
 .sidebar {
   flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
   background-color: var(--color-grey-dark-1); }
 
 .hotel-view {

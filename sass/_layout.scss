@@ -22,6 +22,7 @@
 
 .sidebar {
   flex: 0 0 18%;
+  @include flex(column, space-between, stretch);
 
   background-color: var(--color-grey-dark-1);
 }
